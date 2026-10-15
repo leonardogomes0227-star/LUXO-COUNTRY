@@ -40,7 +40,7 @@ export function MonteSeuEstilo() {
   const msg = `Olá! Vim pelo site da Luxo Country e montei meu estilo: chapéu ${chapeu.nome.toLowerCase()} e cinto ${cinto.nome.toLowerCase()}. Pode me mostrar as opções disponíveis?`;
 
   return (
-    <section id="estilo" className="section-dark relative overflow-hidden py-20 lg:py-28">
+    <section id="estilo" className="section-dark relative overflow-hidden py-14 lg:py-28">
       <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(90,58,38,.55),transparent_65%)]" />
       <div className="container-x relative grid items-center gap-10 lg:grid-cols-[1.25fr_1fr]">
         <div

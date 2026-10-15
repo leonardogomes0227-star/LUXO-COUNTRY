@@ -3,7 +3,7 @@ import { PASSOS } from "../data/content";
 
 export function ComoComprar() {
   return (
-    <section id="como-comprar" className="section-dark py-20 lg:py-28">
+    <section id="como-comprar" className="section-dark py-14 lg:py-28">
       <div className="container-x">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">Como comprar</p>

@@ -27,9 +27,9 @@ export function Colecoes() {
                 href="#catalogo"
                 onClick={(e) => { e.preventDefault(); ir({ publico: c.id }); }}
                 whileHover="hover"
-                className="group relative block aspect-[16/11] overflow-hidden rounded-2xl md:aspect-[4/5] lg:aspect-[5/4] bg-carvao"
+                className="group relative block aspect-square overflow-hidden rounded-2xl md:aspect-[4/5] lg:aspect-[5/4] bg-carvao"
               >
-                <motion.div variants={{ hover: { scale: 1.08 } }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} className="absolute inset-0">
+                <motion.div variants={{ hover: { scale: 1.08 } }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} className="absolute inset-x-0 top-0 bottom-[42%] md:bottom-0">
                   <Img alt={`Coleção ${c.t.toLowerCase()} Luxo Country`} forma={c.forma} />
                 </motion.div>
                 <div className="absolute inset-0 bg-gradient-to-t from-carvao via-carvao/30 to-transparent" />

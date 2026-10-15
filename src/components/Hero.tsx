@@ -21,13 +21,13 @@ export function Hero() {
   const textY = useTransform(scrollYProgress, [0, 1], [0, -60]);
 
   return (
-    <section id="topo" ref={ref} className="section-dark relative isolate flex min-h-[620px] flex-col overflow-hidden lg:min-h-[74svh] lg:flex-row lg:items-center">
+    <section id="topo" ref={ref} className="section-dark relative isolate flex flex-col overflow-hidden lg:min-h-[74svh] lg:flex-row lg:items-center">
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_40%,rgba(176,122,69,.28),transparent_60%),radial-gradient(ellipse_at_10%_90%,rgba(63,143,138,.14),transparent_55%)]" />
       <Parallax progress={scrollYProgress} />
 
-      <motion.div style={{ y: textY }} className="container-x relative z-10 pt-10 lg:w-1/2 lg:max-w-none lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-8">
+      <motion.div style={{ y: textY }} className="container-x relative z-10 pt-2 pb-10 lg:w-1/2 lg:pt-10 lg:pb-0 lg:max-w-none lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-8">
         <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} className="eyebrow">Moda country para toda a família</motion.p>
-        <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08, duration: 0.8 }} className="mt-4 text-[2.9rem] font-bold leading-[1.02] sm:text-6xl lg:text-7xl xl:text-[5.2rem]">
+        <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08, duration: 0.8 }} className="mt-3 text-[2.6rem] font-bold leading-[1.02] sm:text-6xl lg:text-7xl xl:text-[5.2rem]">
           Moda country <span className="italic text-ouro">com o seu jeito</span>
         </motion.h1>
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.18 }} className="mt-5 max-w-lg text-base leading-relaxed text-creme/80 sm:text-lg">
@@ -46,7 +46,7 @@ export function Hero() {
       <motion.div
         ref={setStage}
         style={{ scale, y, opacity }}
-        className="relative z-0 mx-auto mt-2 h-[42svh] min-h-[280px] w-full max-w-xl lg:mt-0 lg:h-[74svh] lg:w-1/2 lg:max-w-none"
+        className="relative z-0 order-first mx-auto h-[36svh] min-h-[240px] w-full max-w-xl lg:order-none lg:h-[74svh] lg:w-1/2 lg:max-w-none"
       >
         <HatIllustration className={`absolute inset-0 m-auto h-full w-full max-w-lg transition-opacity duration-700 ${pronto ? "opacity-0" : "opacity-100"}`} />
         {can3D && (

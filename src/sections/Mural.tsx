@@ -9,7 +9,7 @@ export function Mural() {
   const rolar = (dir: 1 | -1) => trilho.current?.scrollBy({ left: dir * 320, behavior: "smooth" });
 
   return (
-    <section id="clientes" className="section-cream py-20 lg:py-28">
+    <section id="clientes" className="section-cream py-14 lg:py-28">
       <div className="container-x">
         <Reveal className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">

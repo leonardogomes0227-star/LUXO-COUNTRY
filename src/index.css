@@ -11,9 +11,10 @@
 
 @layer base {
   html {
-    scroll-padding-top: 8rem;
+    scroll-padding-top: 5rem;
     -webkit-text-size-adjust: 100%;
   }
+  @media (min-width: 1024px) { html { scroll-padding-top: 8rem; } }
   html.lenis, html.lenis body { height: auto; }
   .lenis.lenis-smooth { scroll-behavior: auto !important; }
   body {

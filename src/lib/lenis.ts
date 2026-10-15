@@ -10,7 +10,7 @@ export function useSmoothScroll() {
     let cancelado = false;
     import("lenis").then(({ default: Lenis }) => {
       if (cancelado) return;
-      const lenis = new Lenis({ duration: 1.1, anchors: { offset: -120 } });
+      const lenis = new Lenis({ duration: 1.1, anchors: { offset: window.innerWidth < 1024 ? -76 : -120 } });
       const tick = (t: number) => { lenis.raf(t); raf = requestAnimationFrame(tick); };
       raf = requestAnimationFrame(tick);
       destroy = () => lenis.destroy();

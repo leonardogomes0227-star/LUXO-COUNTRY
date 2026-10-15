@@ -5,7 +5,7 @@ import { HISTORIA } from "../data/content";
 
 export function Loja() {
   return (
-    <section id="loja" className="section-cream py-20 lg:py-28">
+    <section id="loja" className="section-cream py-14 lg:py-28">
       <div className="container-x grid gap-12 lg:grid-cols-2">
         <Reveal>
           <p className="eyebrow">Nossa loja</p>

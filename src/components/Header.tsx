@@ -21,7 +21,7 @@ function Busca({ className = "" }: { className?: string }) {
   return (
     <form role="search" onSubmit={(e) => { e.preventDefault(); ir({ busca: q }); }} className={`relative ${className}`}>
       <label className="sr-only" htmlFor="busca-topo">Buscar produtos</label>
-      <input id="busca-topo" type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="O que você procura? Ex.: bota, chapéu, camisa" className="h-12 w-full rounded-full border border-creme/20 bg-creme pl-5 pr-14 text-[15px] text-carvao placeholder:text-carvao/50 focus:outline-none focus:ring-2 focus:ring-ouro" />
+      <input id="busca-topo" type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Buscar bota, chapéu, camisa..." className="h-12 w-full rounded-full border border-creme/20 bg-creme pl-5 pr-14 text-[15px] text-carvao placeholder:text-carvao/50 focus:outline-none focus:ring-2 focus:ring-ouro" />
       <button type="submit" aria-label="Buscar" className="absolute right-1.5 top-1.5 grid h-9 w-9 place-items-center rounded-full bg-couro text-creme transition-colors hover:bg-caramelo"><IconSearch width={18} height={18} /></button>
     </form>
   );
@@ -64,7 +64,6 @@ export function Header() {
             </button>
           </div>
         </div>
-        <div className="container-x pb-3 lg:hidden"><Busca /></div>
 
         <nav aria-label="Categorias" className="hidden border-t border-creme/10 lg:block">
           <ul className="container-x flex items-center gap-1 text-sm font-semibold">
@@ -89,6 +88,7 @@ export function Header() {
           </ul>
         </nav>
       </header>
+      <div className="bg-carvao pb-3 lg:hidden"><div className="container-x"><Busca /></div></div>
 
       <AnimatePresence>
         {menu && (

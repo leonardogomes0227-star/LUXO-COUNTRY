@@ -6,7 +6,7 @@ import { waLink } from "../lib/whatsapp";
 
 export function CtaFinal() {
   return (
-    <section id="contato" className="section-cream relative overflow-hidden py-24 text-center lg:py-32">
+    <section id="contato" className="section-cream relative overflow-hidden py-16 text-center lg:py-32">
       <div aria-hidden className="absolute inset-4 rounded-[2rem] border-2 border-dashed border-couro/30 sm:inset-8" />
       <Reveal className="container-x relative">
         <Logo size={96} className="mx-auto" />

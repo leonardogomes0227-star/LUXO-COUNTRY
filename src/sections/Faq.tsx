@@ -7,7 +7,7 @@ import { FAQ } from "../data/content";
 export function Faq() {
   const [aberta, setAberta] = useState<number | null>(0);
   return (
-    <section id="faq" className="section-dark py-20 lg:py-28">
+    <section id="faq" className="section-dark py-14 lg:py-28">
       <div className="container-x grid gap-12 lg:grid-cols-[1fr_1.4fr]">
         <Reveal>
           <p className="eyebrow">Dúvidas</p>
