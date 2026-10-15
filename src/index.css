@@ -11,7 +11,7 @@
 
 @layer base {
   html {
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 8rem;
     -webkit-text-size-adjust: 100%;
   }
   html.lenis, html.lenis body { height: auto; }

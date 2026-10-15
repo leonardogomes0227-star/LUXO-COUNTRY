@@ -3,12 +3,13 @@ import { Img } from "../components/Img";
 import { Reveal } from "../components/Reveal";
 import { IconArrow, IconStar } from "../components/Icons";
 import { SITE } from "../config";
-import type { Publico } from "../data/products";
+import { useFiltros } from "../store/filters";
 import { waLink } from "../lib/whatsapp";
 
 const POSTS = ["chapeus", "botas", "camisas"] as const;
 
-export function Infantil({ onEscolher }: { onEscolher: (p: Publico) => void }) {
+export function Infantil() {
+  const { ir } = useFiltros();
   return (
     <section id="infantil" className="relative overflow-hidden bg-[#F8E9CC] py-20 text-carvao lg:py-28 on-cream">
       <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-turquesa/20 blur-3xl" />
@@ -25,7 +26,7 @@ export function Infantil({ onEscolher }: { onEscolher: (p: Publico) => void }) {
             ))}
           </ul>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href="#catalogo" onClick={() => onEscolher("infantil")} className="btn-dark">Ver linha infantil <IconArrow width={18} height={18} /></a>
+            <a href="#catalogo" onClick={(e) => { e.preventDefault(); ir({ publico: "infantil" }); }} className="btn-dark">Ver linha infantil <IconArrow width={18} height={18} /></a>
             <a href={waLink(`Olá! Vim pelo site da ${SITE.nome} e quero ver peças infantis.`)} target="_blank" rel="noopener noreferrer" className="btn-ghost">Falar sobre tamanhos</a>
           </div>
         </Reveal>

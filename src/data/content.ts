@@ -14,12 +14,14 @@ export const PASSOS = [
   { n: "03", t: "Receba em casa", d: "Enviamos para todo o Brasil, com parcelamento no cartão." },
 ];
 
-export const CONFIANCA = [
-  "Envio para todo o Brasil",
-  "Parcelamos no cartão",
-  "Atendimento pelo WhatsApp",
-  "Loja física em Rio Verde",
-];
+export const AVISOS = ["Enviamos para todo o Brasil", "Parcelamos no cartão", "Peça pelo WhatsApp e receba em casa"];
+
+export const BENEFICIOS = [
+  { t: "Envio para todo o Brasil", d: "Combine o envio pelo WhatsApp", icone: "truck" },
+  { t: "Parcelamos no cartão", d: "Condições no atendimento", icone: "card" },
+  { t: "Atendimento pelo WhatsApp", d: "Do pedido à entrega", icone: "chat" },
+  { t: "Loja física", d: "Rio Verde de Mato Grosso, MS", icone: "pin" },
+] as const;
 
 /** CONFIRMAR: texto de apresentação, editável pelo cliente. */
 export const HISTORIA = [

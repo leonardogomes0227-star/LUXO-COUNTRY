@@ -19,12 +19,10 @@ export default {
         rye: ["Rye", "serif"],
       },
       keyframes: {
-        marquee: { from: { transform: "translateX(0)" }, to: { transform: "translateX(-50%)" } },
         shine: { "0%": { transform: "translateX(-120%)" }, "60%,100%": { transform: "translateX(120%)" } },
         pulseRing: { "0%": { transform: "scale(1)", opacity: ".5" }, "100%": { transform: "scale(1.6)", opacity: "0" } },
       },
       animation: {
-        marquee: "marquee 38s linear infinite",
         shine: "shine 3.4s ease-in-out infinite",
         pulseRing: "pulseRing 2.6s ease-out infinite",
       },
