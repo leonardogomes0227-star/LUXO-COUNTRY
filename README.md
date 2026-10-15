@@ -32,4 +32,4 @@ npm run preview  # testar o build
 - Fotos de clientes/feedbacks e de crianças: autorização de uso
 - Respostas do FAQ (envio, prazos, trocas, pagamento, tamanhos) e texto "Nossa loja"
 - Seguidores/publicações exibidos (valores aproximados do perfil) e domínio final
-- Logo oficial em vetor (o selo atual é uma recriação)
+- Logo em alta resolução (PNG/SVG): o arquivo atual tem só 150px
