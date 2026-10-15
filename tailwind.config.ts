@@ -11,9 +11,11 @@ export default {
         caramelo: "#B07A45",
         ouro: "#C9A15B",
         turquesa: "#3F8F8A",
+        terra: "#9C4A2B",
+        sol: "#E9A85A",
       },
       fontFamily: {
-        display: ['"Playfair Display"', "Georgia", "serif"],
+        display: ['"Fraunces Variable"', "Georgia", "serif"],
         sans: ['"Inter Variable"', "system-ui", "sans-serif"],
         script: ['"Great Vibes"', "cursive"],
         rye: ["Rye", "serif"],

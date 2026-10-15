@@ -10,8 +10,8 @@ export function Faq() {
     <section id="faq" className="section-dark py-14 lg:py-28">
       <div className="container-x grid gap-12 lg:grid-cols-[1fr_1.4fr]">
         <Reveal>
-          <p className="eyebrow">Dúvidas</p>
-          <h2 className="h-section mt-3">Perguntas frequentes</h2>
+          <p className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-sol"><span className="font-display text-sm normal-case italic tracking-normal">(12)</span> Dúvidas</p>
+          <h2 className="h-section mt-4">Perguntas <em className="font-normal italic text-sol">frequentes</em></h2>
           <p className="mt-4 text-creme/70">Não achou o que procurava? Chame a gente no WhatsApp.</p>
         </Reveal>
         <div className="divide-y divide-creme/15 border-y border-creme/15">
@@ -20,7 +20,7 @@ export function Faq() {
             return (
               <div key={f.p}>
                 <h3>
-                  <button id={`faq-b-${i}`} aria-expanded={on} aria-controls={`faq-p-${i}`} onClick={() => setAberta(on ? null : i)} className="flex min-h-14 w-full items-center justify-between gap-4 py-5 text-left font-display text-xl font-bold hover:text-ouro">
+                  <button id={`faq-b-${i}`} aria-expanded={on} aria-controls={`faq-p-${i}`} onClick={() => setAberta(on ? null : i)} className="flex min-h-14 w-full items-center justify-between gap-4 py-5 text-left font-display text-xl font-medium hover:text-sol sm:text-2xl">
                     {f.p}
                     <IconPlus className={`shrink-0 text-ouro transition-transform duration-300 ${on ? "rotate-45" : ""}`} />
                   </button>

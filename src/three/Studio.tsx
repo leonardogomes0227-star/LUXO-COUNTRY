@@ -9,6 +9,8 @@ export function Studio() {
       <ambientLight intensity={0.5} />
       <directionalLight position={[3, 5, 4]} intensity={2.4} color="#fff1dc" />
       <directionalLight position={[-4, 2, -3]} intensity={3} color="#e8c27a" />
+      {/* contraluz quente do pôr do sol */}
+      <directionalLight position={[1.5, -0.4, -5]} intensity={5} color="#F0A050" />
       <Environment resolution={256} frames={1} environmentIntensity={1.4}>
         <Lightformer form="rect" intensity={3.2} position={[0, 5, 2]} scale={[8, 3, 1]} rotation-x={Math.PI / 2} />
         <Lightformer form="rect" intensity={2} position={[-5, 1, 2]} scale={[3, 5, 1]} rotation-y={Math.PI / 2} />

@@ -1,46 +1,39 @@
 import { Counter } from "../components/Counter";
 import { IconInstagram } from "../components/Icons";
-import { Img } from "../components/Img";
 import { Reveal } from "../components/Reveal";
+import { SectionHeader } from "../components/SectionHeader";
 import { INSTAGRAM_URL, SITE } from "../config";
 import { POSTS_INSTAGRAM } from "../data/vitrine";
 
-const FORMAS = ["chapeus", "botas", "camisas", "cavalo", "jeans", "cintos", "pessoa", "camisetas", "acessorios"] as const;
-
 export function Instagram() {
   return (
-    <section id="instagram" className="section-dark py-14 lg:py-28">
+    <section id="instagram" className="section-dark py-16 lg:py-28">
       <div className="container-x">
-        <Reveal className="flex flex-wrap items-end justify-between gap-8">
-          <div>
-            <p className="eyebrow">Instagram</p>
-            <h2 className="h-section mt-3">@{SITE.instagram}</h2>
-            <dl className="mt-5 flex gap-10">
-              <div>
-                <dt className="text-sm text-creme/60">Seguidores</dt>
-                <dd className="font-display text-3xl font-bold text-ouro"><Counter to={SITE.instagramSeguidores} prefix="+" /></dd>
-              </div>
-              <div>
-                <dt className="text-sm text-creme/60">Publicações</dt>
-                <dd className="font-display text-3xl font-bold text-ouro"><Counter to={SITE.instagramPublicacoes} prefix="+" /></dd>
-              </div>
-            </dl>
-          </div>
-          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="btn-gold"><IconInstagram width={18} height={18} /> Seguir @{SITE.instagram}</a>
-        </Reveal>
-
-        <ul className="mt-10 grid grid-cols-3 gap-2 sm:gap-4">
+        <SectionHeader
+          n="10"
+          eyebrow="Instagram"
+          title={<>Siga a <em className="font-normal italic text-sol">@{SITE.instagram}</em></>}
+          desc={
+            <span className="flex gap-10">
+              <span><span className="block font-display text-4xl font-semibold text-sol"><Counter to={SITE.instagramSeguidores} prefix="+" /></span><span className="text-sm text-creme/60">seguidores</span></span>
+              <span><span className="block font-display text-4xl font-semibold text-sol"><Counter to={SITE.instagramPublicacoes} prefix="+" /></span><span className="text-sm text-creme/60">publicações</span></span>
+            </span>
+          }
+          action={<a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="btn-gold"><IconInstagram width={18} height={18} /> Seguir no Instagram</a>}
+        />
+        <ul className="grid grid-cols-3 gap-1.5 sm:gap-3">
           {POSTS_INSTAGRAM.map((p, i) => (
-            <li key={p.id} className="list-none">
-              <Reveal delay={(i % 3) * 0.08} className="group relative aspect-square overflow-hidden rounded-xl sm:rounded-2xl">
-                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label={`${p.alt}, abrir no Instagram`} className="block h-full">
-                  <Img src={p.src} srcSet={p.srcSet} sizes="(min-width:1024px) 400px, 33vw" alt={p.alt} forma={FORMAS[i % FORMAS.length]} className="transition-transform duration-700 group-hover:scale-110" />
+            <li key={p.id}>
+              <Reveal delay={(i % 3) * 0.08} className="group relative aspect-square overflow-hidden rounded-lg sm:rounded-2xl">
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label={`${p.alt}, abrir Instagram`} className="block h-full">
+                  {p.src && <img src={p.src} alt={p.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />}
                   <span className="absolute inset-0 grid place-items-center bg-carvao/55 opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"><IconInstagram width={32} height={32} /></span>
                 </a>
               </Reveal>
             </li>
           ))}
         </ul>
+        <p className="mt-4 text-xs text-creme/45">Imagens ilustrativas até conectar as fotos do perfil.</p>
       </div>
     </section>
   );

@@ -1,23 +1,26 @@
-import { Placeholder } from "../components/Img";
-import { Reveal } from "../components/Reveal";
+import { SectionHeader } from "../components/SectionHeader";
 import { CATEGORIAS } from "../data/products";
 import { useFiltros } from "../store/filters";
 
 export function Categorias() {
   const { ir } = useFiltros();
   return (
-    <section id="categorias" className="section-cream pb-14 pt-4 lg:pb-20">
+    <section id="categorias" className="section-cream pb-16 lg:pb-24">
       <div className="container-x">
-        <Reveal><h2 className="font-display text-3xl font-bold sm:text-4xl">Compre por categoria</h2></Reveal>
-        <ul className="no-scrollbar -mx-5 mt-8 flex gap-5 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-4 sm:gap-6 sm:overflow-visible sm:px-0 lg:grid-cols-7">
+        <SectionHeader n="03" eyebrow="Categorias" title={<>Compre por <em className="font-normal italic text-terra">categoria</em></>} desc="Do chapéu à bota: encontre a peça certa e peça direto pelo WhatsApp." />
+        <ul className="no-scrollbar -mx-5 flex gap-3 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-4 sm:gap-4 sm:overflow-visible sm:px-0 lg:grid-cols-7">
           {CATEGORIAS.map((c) => (
-            <li key={c.id} className="shrink-0">
-              <button onClick={() => ir({ categoria: c.id })} className="group flex w-24 flex-col items-center gap-3 sm:w-full">
-                <span className="block aspect-square w-full overflow-hidden rounded-full border-2 border-couro/20 transition-all group-hover:border-couro group-hover:shadow-lg group-hover:shadow-couro/25">
-                  {/* CONFIRMAR: trocar pelas fotos reais de cada categoria */}
-                  <Placeholder forma={c.id} className="transition-transform duration-500 group-hover:scale-110" />
+            <li key={c.id} className="w-[38vw] shrink-0 sm:w-auto">
+              <button onClick={() => ir({ categoria: c.id })} className="group block w-full text-left">
+                <span className="relative block aspect-[4/5] overflow-hidden rounded-2xl">
+                  {/* CONFIRMAR: trocar pela foto real da categoria */}
+                  <img src={`/images/arte/cat-${c.id}.webp`} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <span className="absolute inset-0 bg-gradient-to-t from-carvao/70 via-transparent to-transparent" />
+                  <span className="absolute inset-x-3 bottom-3 flex items-center justify-between font-display text-lg font-semibold text-creme">
+                    {c.nome}
+                    <span aria-hidden className="grid h-7 w-7 place-items-center rounded-full bg-creme/90 text-sm text-carvao transition-transform group-hover:-rotate-45">→</span>
+                  </span>
                 </span>
-                <span className="text-sm font-semibold group-hover:text-couro">{c.nome}</span>
               </button>
             </li>
           ))}

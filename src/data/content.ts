@@ -23,6 +23,10 @@ export const BENEFICIOS = [
   { t: "Loja física", d: "Rio Verde de Mato Grosso, MS", icone: "pin" },
 ] as const;
 
+/** CONFIRMAR: manifesto da marca, editável pelo cliente. */
+export const MANIFESTO =
+  "Vestir country é carregar a história de quem vive o campo. Na Luxo Country, cada peça é escolhida para unir tradição, conforto e presença, do curral à cidade, para você e para toda a família.";
+
 /** CONFIRMAR: texto de apresentação, editável pelo cliente. */
 export const HISTORIA = [
   "A Luxo Country nasceu do gosto por um estilo que combina tradição e elegância. Aqui você encontra camisas, jeans, chapéus, cintos, botas e acessórios para toda a família, escolhidos com cuidado.",

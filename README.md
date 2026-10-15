@@ -16,6 +16,8 @@ npm run preview  # testar o build
 | Número de WhatsApp, horário, mapa, domínio, seguidores | `src/config.ts` |
 | Produtos (nome, tamanhos, preço, fotos) | `src/data/products.ts` (`preco: null` mostra "Consulte") |
 | FAQ, passos, texto da loja | `src/data/content.ts` |
+| Arte ilustrativa (lookbook, categorias, feed) | `public/images/arte/` — trocar por fotos reais mantendo os nomes |
+| Manifesto da marca | `src/data/content.ts` (`MANIFESTO`) |
 | Fotos de clientes, feedbacks, Instagram | `src/data/vitrine.ts` + `public/images/` (veja `public/images/LEIA-ME.md`) |
 | Chapéu 3D próprio | `public/models/chapeu.glb` + `USAR_MODELO_GLB` em `src/config.ts` |
 | Domínio no SEO | `index.html`, `public/sitemap.xml`, `public/robots.txt` |

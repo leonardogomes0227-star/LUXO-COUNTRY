@@ -10,7 +10,9 @@ import { CartDrawer } from "./components/CartDrawer";
 import { MobileTabBar } from "./components/MobileTabBar";
 import { Stories } from "./components/Stories";
 import { WhatsAppFloat } from "./components/WhatsAppFloat";
-import { Colecoes } from "./sections/Colecoes";
+import { Lookbook } from "./sections/Lookbook";
+import { Manifesto } from "./sections/Manifesto";
+import { GiantMarquee } from "./components/GiantMarquee";
 import { Categorias } from "./sections/Categorias";
 import { Destaques } from "./sections/Destaques";
 import { Catalogo } from "./sections/Catalogo";
@@ -34,10 +36,12 @@ export default function App() {
         <main>
           <Hero />
           <Beneficios />
-          <Colecoes />
+          <Lookbook />
+          <Manifesto />
           <Categorias />
           <Destaques />
           <Catalogo />
+          <GiantMarquee />
           <Infantil />
           <MonteSeuEstilo />
           <ComoComprar />

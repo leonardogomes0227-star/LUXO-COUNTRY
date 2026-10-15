@@ -22,7 +22,9 @@ export const FEEDBACKS: Foto[] = Array.from({ length: 3 }, (_, i) => ({
   alt: `Print de feedback de cliente (${i + 1})`,
 }));
 
+// CONFIRMAR: composições ilustrativas. Trocar por posts reais do perfil (public/images/instagram/).
 export const POSTS_INSTAGRAM: Foto[] = Array.from({ length: 9 }, (_, i) => ({
   id: `post-${i + 1}`,
-  alt: `Publicação ${i + 1} do Instagram @luxocountryrv`,
+  alt: `Composição ilustrativa de peças country (${i + 1})`,
+  src: `/images/arte/ig-${i + 1}.webp`,
 }));

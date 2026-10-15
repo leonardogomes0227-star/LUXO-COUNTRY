@@ -41,8 +41,8 @@ export default function HeroCanvas({ progress, ativo, onPronto }: { progress: Mo
   return (
     <Canvas
       frameloop={ativo ? "always" : "never"}
-      dpr={[1, 1.75]}
-      camera={{ position: [0, 1.2, window.innerWidth < 640 ? 6.9 : 7.6], fov: 32 }}
+      dpr={[1, 1.5]}
+      camera={{ position: [0, 1.2, window.innerWidth < 640 ? 7.4 : 7.2], fov: 32 }}
       gl={{ antialias: true, powerPreference: "high-performance", alpha: true }}
       aria-label="Chapéu de cowboy em 3D. Arraste para girar."
     >

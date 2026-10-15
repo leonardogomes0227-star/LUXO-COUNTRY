@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useMemo, useState } from "react";
+import { SectionHeader } from "../components/SectionHeader";
 import { ProductCard } from "../components/ProductCard";
 import { CATEGORIAS, PRODUCTS, PUBLICOS } from "../data/products";
 import { useFiltros } from "../store/filters";
@@ -70,14 +71,9 @@ export function Catalogo() {
   ].filter(Boolean) as { k: string; t: string; off: () => void }[];
 
   return (
-    <section id="catalogo" className="section-cream py-12 lg:py-16">
+    <section id="catalogo" className="section-cream border-t border-couro/10 py-16 lg:py-24">
       <div className="container-x">
-        <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <h2 className="font-display text-3xl font-bold sm:text-4xl">Todos os produtos</h2>
-            <p className="mt-1 text-sm text-carvao/65">Peças de exemplo até o catálogo real ser cadastrado. Compre pelo WhatsApp ou monte sua sacola.</p>
-          </div>
-        </div>
+        <SectionHeader n="05" eyebrow="Catálogo" title={<>Todas as <em className="font-normal italic text-terra">peças</em></>} desc="Peças de exemplo até o catálogo real ser cadastrado. Escolha o tamanho e peça pelo WhatsApp ou monte sua sacola." />
 
         <div className="grid gap-8 lg:grid-cols-[17rem_1fr]">
           <aside aria-label="Filtros" className={`${painel ? "block" : "hidden"} rounded-2xl border border-couro/15 bg-white px-5 lg:block lg:self-start lg:sticky lg:top-36`}>

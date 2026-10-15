@@ -1,19 +1,17 @@
 import { useFiltros } from "../store/filters";
 import type { Categoria, Publico } from "../data/products";
-import { Placeholder } from "./Img";
 
-type Forma = Categoria | "cavalo" | "pessoa" | "cacto";
-interface Story { t: string; forma: Forma; href: string; filtro?: { publico?: Publico; categoria?: Categoria } }
+interface Story { t: string; img: string; href: string; filtro?: { publico?: Publico; categoria?: Categoria } }
 
 const STORIES: Story[] = [
-  { t: "Novidades", forma: "chapeus", href: "#destaques" },
-  { t: "Infantil", forma: "botas", href: "#catalogo", filtro: { publico: "infantil" } },
-  { t: "Botas", forma: "botas", href: "#catalogo", filtro: { categoria: "botas" } },
-  { t: "Chapéus", forma: "chapeus", href: "#catalogo", filtro: { categoria: "chapeus" } },
-  { t: "Cintos", forma: "cintos", href: "#catalogo", filtro: { categoria: "cintos" } },
-  { t: "Clientes", forma: "pessoa", href: "#clientes" },
-  { t: "Loja", forma: "cacto", href: "#loja" },
-  { t: "Instagram", forma: "cavalo", href: "#instagram" },
+  { t: "Novidades", img: "ig-1", href: "#destaques" },
+  { t: "Infantil", img: "look-infantil-600", href: "#catalogo", filtro: { publico: "infantil" } },
+  { t: "Botas", img: "cat-botas", href: "#catalogo", filtro: { categoria: "botas" } },
+  { t: "Chapéus", img: "cat-chapeus", href: "#catalogo", filtro: { categoria: "chapeus" } },
+  { t: "Cintos", img: "cat-cintos", href: "#catalogo", filtro: { categoria: "cintos" } },
+  { t: "Clientes", img: "ig-8", href: "#clientes" },
+  { t: "Loja", img: "ig-4", href: "#loja" },
+  { t: "Instagram", img: "ig-6", href: "#instagram" },
 ];
 
 /** Atalhos redondos com anel dourado, como os destaques do Instagram da loja. Só no celular. */
@@ -26,7 +24,7 @@ export function Stories() {
           <li key={s.t} className="shrink-0">
             <a href={s.href} onClick={s.filtro ? (e) => { e.preventDefault(); ir(s.filtro!); } : undefined} className="flex w-[68px] flex-col items-center gap-1.5 text-[11px] font-medium text-creme/85">
               <span className="block rounded-full bg-gradient-to-tr from-ouro via-caramelo to-turquesa p-[2.5px]">
-                <span className="block h-[62px] w-[62px] overflow-hidden rounded-full border-2 border-carvao"><Placeholder forma={s.forma} /></span>
+                <span className="block h-[62px] w-[62px] overflow-hidden rounded-full border-2 border-carvao"><img src={`/images/arte/${s.img}.webp`} alt="" loading="lazy" className="h-full w-full object-cover" /></span>
               </span>
               {s.t}
             </a>

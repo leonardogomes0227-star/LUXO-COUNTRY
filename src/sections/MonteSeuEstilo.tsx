@@ -58,8 +58,8 @@ export function MonteSeuEstilo() {
 
         <Reveal className="space-y-8">
           <div>
-            <p className="eyebrow">Monte seu estilo</p>
-            <h2 className="h-section mt-3">Escolha as cores, veja ao vivo</h2>
+            <p className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-sol"><span className="font-display text-sm normal-case italic tracking-normal">(07)</span> Monte seu estilo</p>
+            <h2 className="h-section mt-4">Escolha as cores, <em className="font-normal italic text-sol">veja ao vivo</em></h2>
             <p className="mt-4 text-creme/75">Combine o chapéu e o cinto do seu jeito e envie a combinação pelo WhatsApp. A disponibilidade de cada cor é confirmada no atendimento.</p>
           </div>
           <Seletor titulo="Chapéu" opcoes={CHAPEUS} valor={chapeu} onChange={setChapeu} />

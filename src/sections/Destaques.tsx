@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { IconArrow } from "../components/Icons";
+import { SectionHeader } from "../components/SectionHeader";
 import { ProductCard } from "../components/ProductCard";
 import { PRODUCTS } from "../data/products";
 
@@ -10,15 +11,19 @@ export function Destaques() {
   const trilho = useRef<HTMLUListElement>(null);
   const rolar = (d: 1 | -1) => trilho.current?.scrollBy({ left: d * 300, behavior: "smooth" });
   return (
-    <section id="destaques" className="section-cream pb-14 lg:pb-20">
+    <section id="destaques" className="section-cream pb-16 lg:pb-24">
       <div className="container-x">
-        <div className="mb-6 flex items-end justify-between gap-4 border-b-2 border-couro pb-3">
-          <h2 className="font-display text-3xl font-bold sm:text-4xl">Em destaque</h2>
-          <div className="flex gap-2">
-            <button onClick={() => rolar(-1)} aria-label="Anteriores" className="grid h-10 w-10 rotate-180 place-items-center rounded-full border border-couro/40 hover:bg-couro hover:text-creme"><IconArrow width={18} height={18} /></button>
-            <button onClick={() => rolar(1)} aria-label="Próximos" className="grid h-10 w-10 place-items-center rounded-full border border-couro/40 hover:bg-couro hover:text-creme"><IconArrow width={18} height={18} /></button>
-          </div>
-        </div>
+        <SectionHeader
+          n="04"
+          eyebrow="Em destaque"
+          title={<>As queridinhas <em className="font-normal italic text-terra">da casa</em></>}
+          action={
+            <div className="flex gap-2">
+              <button onClick={() => rolar(-1)} aria-label="Anteriores" className="grid h-12 w-12 rotate-180 place-items-center rounded-full border border-couro/40 transition-colors hover:bg-carvao hover:text-creme"><IconArrow width={18} height={18} /></button>
+              <button onClick={() => rolar(1)} aria-label="Próximos" className="grid h-12 w-12 place-items-center rounded-full border border-couro/40 transition-colors hover:bg-carvao hover:text-creme"><IconArrow width={18} height={18} /></button>
+            </div>
+          }
+        />
         <ul ref={trilho} className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-3 sm:mx-0 sm:px-0">
           {DESTAQUES.map((p) => <li key={p.id} className="w-[46%] shrink-0 snap-start sm:w-[270px]"><ProductCard p={p} /></li>)}
         </ul>
