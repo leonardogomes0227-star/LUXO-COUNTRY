@@ -7,6 +7,8 @@ import { Hero } from "./components/Hero";
 import { Beneficios } from "./components/Beneficios";
 import { Cursor } from "./components/Cursor";
 import { CartDrawer } from "./components/CartDrawer";
+import { MobileTabBar } from "./components/MobileTabBar";
+import { Stories } from "./components/Stories";
 import { WhatsAppFloat } from "./components/WhatsAppFloat";
 import { Colecoes } from "./sections/Colecoes";
 import { Categorias } from "./sections/Categorias";
@@ -28,6 +30,7 @@ export default function App() {
       <FiltrosProvider>
         <AnnouncementBar />
         <Header />
+        <Stories />
         <main>
           <Hero />
           <Beneficios />
@@ -47,6 +50,7 @@ export default function App() {
         <Footer />
         <CartDrawer />
         <Cursor />
+        <MobileTabBar />
         <WhatsAppFloat />
       </FiltrosProvider>
     </CartProvider>

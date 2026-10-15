@@ -26,7 +26,7 @@ const COLUNAS = [
 
 export function Footer() {
   return (
-    <footer className="section-dark border-t-4 border-couro pb-8 pt-14">
+    <footer className="section-dark border-t-4 border-couro pb-24 pt-14 lg:pb-8">
       <div className="container-x grid gap-10 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1.3fr]">
         <div>
           <Logo size={80} />

@@ -43,3 +43,9 @@ export const IconMinus = (p: SVGProps<SVGSVGElement>) => (
 export const IconStar = (p: SVGProps<SVGSVGElement>) => (
   <svg {...base({ fill: "currentColor", stroke: "none", ...p })}><path d="m12 2 2.6 6.4 6.9.5-5.3 4.5 1.7 6.7L12 16.4 6.1 20.1l1.7-6.7L2.5 8.9l6.9-.5L12 2Z" /></svg>
 );
+export const IconHome = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}><path d="M3 11 12 4l9 7v9H3z" /><path d="M9 20v-6h6v6" /></svg>
+);
+export const IconGrid = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}><rect x="3.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="3.5" y="13.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="13.5" width="7" height="7" rx="1.5" /></svg>
+);

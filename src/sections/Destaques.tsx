@@ -20,7 +20,7 @@ export function Destaques() {
           </div>
         </div>
         <ul ref={trilho} className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-3 sm:mx-0 sm:px-0">
-          {DESTAQUES.map((p) => <li key={p.id} className="w-[72%] shrink-0 snap-start sm:w-[270px]"><ProductCard p={p} /></li>)}
+          {DESTAQUES.map((p) => <li key={p.id} className="w-[46%] shrink-0 snap-start sm:w-[270px]"><ProductCard p={p} /></li>)}
         </ul>
       </div>
     </section>

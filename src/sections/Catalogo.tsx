@@ -106,7 +106,7 @@ export function Catalogo() {
               </div>
             )}
 
-            <motion.div layout className="grid grid-cols-1 gap-4 min-[480px]:grid-cols-2 xl:grid-cols-3">
+            <motion.div layout className="grid grid-cols-2 gap-2.5 sm:gap-4 xl:grid-cols-3">
               <AnimatePresence mode="popLayout">{lista.map((p) => <ProductCard key={p.id} p={p} />)}</AnimatePresence>
             </motion.div>
             {lista.length === 0 && (
