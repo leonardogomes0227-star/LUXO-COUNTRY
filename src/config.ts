@@ -25,9 +25,5 @@ export const ATENDIMENTO = {
   parcelaNoCartao: true, // loja informa parcelamento no cartão
 } as const;
 
-/** Mude para `true` depois de colocar o arquivo em `public/models/chapeu.glb`. */
-export const USAR_MODELO_GLB = false;
-export const CAMINHO_MODELO_GLB = "/models/chapeu.glb";
-
 export const WHATSAPP_CONFIGURADO = !SITE.whatsapp.includes("X");
 export const INSTAGRAM_URL = `https://www.instagram.com/${SITE.instagram}/`;

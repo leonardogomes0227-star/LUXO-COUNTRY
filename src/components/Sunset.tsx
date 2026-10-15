@@ -35,22 +35,11 @@ export function Sunset({ progress }: { progress: MotionValue<number> }) {
         <rect width="1600" height="1000" fill="url(#ss-ceu)" />
       </svg>
 
-      <motion.svg style={{ y: ySol }} viewBox={VB} preserveAspectRatio="xMidYMax slice" className={camada}>
-        <defs>
-          <radialGradient id="ss-sol" cx=".5" cy=".42" r=".6">
-            <stop offset="0" stopColor="#FFF1C9" />
-            <stop offset=".55" stopColor="#F8C774" />
-            <stop offset="1" stopColor="#EC9446" />
-          </radialGradient>
-          <radialGradient id="ss-brilho" cx=".5" cy=".5" r=".5">
-            <stop offset="0" stopColor="#F6C06A" stopOpacity=".55" />
-            <stop offset=".45" stopColor="#E9A85A" stopOpacity=".18" />
-            <stop offset="1" stopColor="#E9A85A" stopOpacity="0" />
-          </radialGradient>
-        </defs>
-        <circle cx="860" cy="700" r="520" fill="url(#ss-brilho)" />
-        <circle cx="860" cy="700" r="165" fill="url(#ss-sol)" />
-      </motion.svg>
+      {/* sol: no celular fica no meio da cena; no computador, se pondo atrás das serras */}
+      <motion.div style={{ y: ySol }} className="absolute left-1/2 top-[27%] aspect-square w-[64vw] max-w-[420px] -translate-x-1/2 lg:top-[33%] lg:w-[25vw] lg:max-w-[440px]">
+        <div className="absolute inset-[-80%] rounded-full bg-[radial-gradient(circle,rgba(246,192,106,.5)_0%,rgba(233,168,90,.16)_35%,transparent_68%)]" />
+        <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_50%_42%,#FFF1C9_0%,#F8C774_50%,#EC9446_100%)] shadow-[0_0_80px_10px_rgba(248,199,116,.35)]" />
+      </motion.div>
 
       <motion.svg style={{ y: yLonge }} viewBox={VB} preserveAspectRatio="xMidYMax slice" className={camada}>
         <path d="M0 735 C120 700 210 690 320 712 C430 734 520 660 640 668 C760 676 820 726 930 718 C1050 708 1120 650 1250 664 C1380 678 1480 720 1600 702 V1000 H0Z" fill="#7a3519" opacity=".8" />

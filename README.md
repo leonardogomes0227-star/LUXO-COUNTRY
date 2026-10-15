@@ -1,6 +1,6 @@
 # Luxo Country — site de apresentação
 
-Vite + React + TypeScript + Tailwind, Framer Motion, Lenis e Three.js (react-three-fiber). Sem backend.
+Vite + React + TypeScript + Tailwind, Framer Motion e Lenis. Sem backend.
 
 ## Como rodar
 ```bash
@@ -19,7 +19,7 @@ npm run preview  # testar o build
 | Arte ilustrativa (lookbook, categorias, feed) | `public/images/arte/` — trocar por fotos reais mantendo os nomes |
 | Manifesto da marca | `src/data/content.ts` (`MANIFESTO`) |
 | Fotos de clientes, feedbacks, Instagram | `src/data/vitrine.ts` + `public/images/` (veja `public/images/LEIA-ME.md`) |
-| Chapéu 3D próprio | `public/models/chapeu.glb` + `USAR_MODELO_GLB` em `src/config.ts` |
+| Monte seu estilo (cores de chapéu e cinto) | `src/data/estilo.ts` + imagens em `public/images/estilo/` |
 | Domínio no SEO | `index.html`, `public/sitemap.xml`, `public/robots.txt` |
 
 ## Publicar na Vercel
